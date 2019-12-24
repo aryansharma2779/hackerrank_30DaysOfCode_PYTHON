@@ -1,0 +1,19 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+size=int(input())
+d=dict()
+while(size!=0):
+    data=list(input().split())
+    key=data[0]
+    value=int(data[1])
+    d[key]=value
+    size-=1
+try:
+    while True:
+        a = input()
+        keys=d.keys()
+        if a in keys:
+            print(a+"="+str(d[a]))
+        else:
+            print("Not found")
+except EOFError:
+    pass
